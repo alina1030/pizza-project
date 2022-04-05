@@ -17,7 +17,7 @@ app.use('/api/users/', userRoute)
 app.use('/api/orders/',ordersRoute)
 
 app.get('/',(req,res)=>{
-    res.send("Server working " + port);
+    res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));;
 });
 
 
