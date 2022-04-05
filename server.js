@@ -16,6 +16,8 @@ app.use('/api/pizzas',pizzasRoute)
 app.use('/api/users/', userRoute)
 app.use('/api/orders/',ordersRoute)
 
+app.use(express.static(path.resolve(__dirname, '../client/build')));
+
 app.get('/',(req,res)=>{
     res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));;
 });
