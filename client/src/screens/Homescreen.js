@@ -21,7 +21,7 @@ export default function Homescreen() {
         <div className='row justify-content-center'>
             <Filter/>
             
-      { pizzas.map(pizza => {
+      { pizzas.map((pizza) => {
                 return (
                 <div className='col-md-3 m-3' key={pizza._id}>
                     <div>
