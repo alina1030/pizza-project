@@ -20,12 +20,8 @@ export default function Homescreen() {
     <div>
         <div className='row justify-content-center'>
             <Filter/>
-            {loading ? (
-                <Loading/>
-            ): error ? (
-                <Error error='Something went wrong'/>
-            ): (
-            pizzas.map((pizza) => {
+            
+      { pizzas.map(pizza => {
                 return (
                 <div className='col-md-3 m-3' key={pizza._id}>
                     <div>
@@ -33,8 +29,8 @@ export default function Homescreen() {
                     </div>    
                 </div>   
             );    
-            })
-            )}
+            })}
+            
         </div>
     </div>
   )
