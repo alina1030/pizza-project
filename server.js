@@ -22,7 +22,7 @@ app.use('/api/orders/',ordersRoute)
    res.send("Server working " + port);
  });
 
-if (process.env.NODE_ENV === "production") {  app.use(express.static(path.join(__dirname, "/client/build")));  app.get("*", (req, res) => {    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));  });} else {  app.get("/", (req, res) => {    res.send("<h1>Hello From Node Server vai nodemon</h1>");  });}
+//if (process.env.NODE_ENV === "production") {  app.use(express.static(path.join(__dirname, "/client/build")));  app.get("*", (req, res) => {    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));  });} else {  app.get("/", (req, res) => {    res.send("<h1>Hello From Node Server vai nodemon</h1>");  });}
 
 const port = process.env.PORT || 8000
 
