@@ -13,7 +13,7 @@ export default function Registerscreen() {
     const {error,loading,success} = registerstate
     const dispatch = useDispatch()
     function register(){
-        if(password!=cpassword)
+        if(password!==cpassword)
         {
             alert("passwords not matching")
         }
