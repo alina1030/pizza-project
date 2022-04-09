@@ -29,7 +29,7 @@ export default function Homescreen() {
                 return (
                 <div className='col-md-3 m-3' key={pizza._id}>
                     <div>
-                        <Pizza pizza={pizza} key={pizza._id}/>
+                        <Pizza pizza={pizza} />
                     </div>    
                 </div>   
             );    
