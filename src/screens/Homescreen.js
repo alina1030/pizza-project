@@ -25,8 +25,7 @@ export default function Homescreen() {
             : error ? 
                 <Error error='Something went wrong'/>
             : pizzas.map(pizza => {
-                return 
-                <div key={pizza._id} className='col-md-3 m-3' >
+                return <div key={pizza._id} className='col-md-3 m-3' >
                     <div>
                         <Pizza pizza={pizza} key={pizza._id}/>
                     </div>    
