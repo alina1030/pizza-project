@@ -20,21 +20,20 @@ export default function Homescreen() {
     <div>
         <div className='row justify-content-center'>
             <Filter/>
-            {loading ? (
+            {loading ? 
                 <Loading/>
-            ): error ? (
+            : error ? 
                 <Error error='Something went wrong'/>
-            ): (
-            pizzas.map((pizza) => {
-                return (
-                <div className='col-md-3 m-3' key={pizza._id}>
+            : pizzas.map(pizza => {
+                return 
+                <div key={pizza._id} className='col-md-3 m-3' >
                     <div>
-                        <Pizza pizza={pizza} />
+                        <Pizza pizza={pizza} key={pizza._id}/>
                     </div>    
                 </div>   
-            );    
+                   
             })
-            )}
+            }
         </div>
     </div>
   )
